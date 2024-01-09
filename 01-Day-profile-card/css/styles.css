@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+/* ----- Variables ----- */
+:root {
+	--primary-font-family: 'Montserrat', sans-serif;
+	--body-bg-color: #212020;
+	--card-bg-color: #242323;
+	--footer-bg-color: #1f1e1e;
+	--text-color: #c2c2c2;
+	--tw-bg-color: #0984c6;
+	--li-bg-color: #006184;
+	--fb-bg-color: #456da4;
+	--lh-text: 22px;
+}
+
+body {
+	font-family: var(--primary-font-family);
+	background-color: var(--body-bg-color);
+	color: var(--text-color);
+	line-height: var(--lh-text);
+
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.profile__card {
+	background-color: var(--card-bg-color);
+	width: 400px;
+	border: solid inherit;
+	border-radius: 15px;
+}
+
+.profile__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 5rem 3.2rem 1rem;
+}
+
+.profile__content img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.profile__content .header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5px;
+}
+
+
+.profile__content p {
+	margin-top: 2rem;
+}
+
+.header span {
+	text-align: center;
+	background-color: #1f1e1e;
+	width: 130px;
+	border-radius: 10px;
+	color: #8d8a84;
+}
+
+.footer {
+	display: flex;
+	height: 100px;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--footer-bg-color);
+}
+
+.social__links {
+	display: flex;
+	width: 90%;
+	justify-content: space-evenly;
+	gap: 2rem;
+	font-size: 1.5rem;
+}
+
+.fa-twitter {
+	color: var(--tw-bg-color);
+}
+
+.fa-linkedin {
+	color: var(--li-bg-color);
+}
+
+.fa-facebook-f {
+	color: var(--fb-bg-color);
+}
+
+
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--body-bg-color: #ece5e5;
+		--card-bg-color: #242323;
+	}
+}
