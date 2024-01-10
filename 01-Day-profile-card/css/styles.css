@@ -32,7 +32,6 @@ body {
 .profile__card {
 	background-color: var(--card-bg-color);
 	width: 400px;
-	border: solid inherit;
 	border-radius: 15px;
 }
 
