@@ -1,0 +1,204 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url("https://fonts.googleapis.com/css?family=Merryweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+
+/* ----- Variables ----- */
+* {
+  --title-font-family: 'Merryweather', sans-serif;
+  --body-font-family: 'Poppins', sans-serif;
+
+  --body-bg-color: #D2DDF6;
+  --card-bg-color: #F6F9FF;
+  --text-color: #12163C;
+
+  --blue-color-1: #96B3FF;
+  --blue-color-2: #6792FF;
+  --blue-color-3: #4473EA;
+  --blue-color-4: #1A52E1;
+
+  --fs-text: 1rem;
+  --lh-text: 22px;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: var(--body-font-family);
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  font-size: var(--fs-text);
+  line-height: var(--lh-text);
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.analytics__box {
+  background-color: var(--card-bg-color);
+  width: 800px;
+  height: 380px;
+  border-radius: 40px;
+  padding: 2rem 3rem;
+  box-shadow: 15px 5px 0px 5px #e2edfc;
+}
+
+.header {
+  line-height: 0.5;
+  margin-bottom: 40px;
+}
+
+.header h2 {
+  font-family: var(--title-font-family);
+}
+
+
+.header p {
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+}
+
+/* GRAFICO */
+.grafic {
+  width: 200px;
+  height: 190px;
+  border-radius: 50%;
+
+
+  background: conic-gradient(white 0deg 3deg,
+      #6792fc 3deg 110deg,
+      white 110deg 113deg,
+      #4273e9 113deg 180deg,
+      white 180deg 183deg,
+      #1a53e1 183deg 325deg,
+      white 325deg 330deg,
+      #94b2fd 330deg 360deg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.grafic::before {
+  content: "";
+
+  width: 170px;
+  height: 168px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.text {
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  top: 10;
+  right: 10;
+  left: 10;
+  bottom: 10;
+}
+
+.text p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* DATA */
+.legend {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 100%;
+}
+
+.tittle {
+  width: 160px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.bar {
+  display: flex;
+  width: 230px;
+  height: 10px;
+  justify-content: end;
+  margin-right: 3px;
+}
+
+.bar span {
+  align-items: end;
+  justify-content: left;
+  text-align: end;
+  height: 7px;
+  border-radius: 10px;
+}
+
+.channel {
+  width: 135px;
+  background-color: #6792fc;
+}
+
+.direct {
+  width: 105px;
+  background-color: #4273e9;
+}
+
+.search {
+  width: 70px;
+  background-color: #1a53e1;
+}
+
+.external {
+  width: 33px;
+  background-color: #94b2fd;
+}
+
+.value p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* FOOTER */
+.footer a {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4d77da;
+}
