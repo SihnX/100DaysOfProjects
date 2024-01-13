@@ -1,0 +1,273 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+/* ----- Variables ----- */
+* {
+  /* colores primarios*/
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream-color: hsl(30, 38%, 92%);
+  /* colores neutrales*/
+  --very-dar-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white-color: hsl(0, 0%, 100%);
+  /* fuentes */
+  --fraunces-family: 'Fraunces', serif;
+  --montserrat-family: 'Montserrat', sans-serif;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fraunces-family);
+  background-color: var(--cream-color);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  background-color: var(--white-color);
+  display: flex;
+  width: 600px;
+  height: 500px;
+  border-radius: 15px;
+}
+
+
+.product {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  padding: 2rem;
+}
+
+.header {
+  line-height: 1;
+}
+
+/* INFO */
+
+.product__category {
+  font-family: var(--montserrat-family);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: var(--dark-grayish-blue);
+  text-transform: uppercase;
+}
+
+
+.product__name {
+  font-size: 35px;
+  margin-top: 25px;
+  margin-right: 16px;
+  margin-bottom: 10px;
+}
+
+.product__description {
+  font-family: var(--montserrat-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+
+/* PRICES */
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.__after {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--dark-cyan);
+  margin-left: 2px;
+}
+
+.__before {
+  color: var(--dark-grayish-blue);
+  font-size: 13px;
+  text-decoration: line-through;
+}
+
+
+/* FOOTER */
+
+.footer {
+  font-family: var(--montserrat-family);
+}
+
+.buy_product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #3D8168;
+  color: white;
+  border: none;
+}
+
+i {
+  padding-right: 5px;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  
+
+  .card {
+    flex-direction: column;
+    height: 70vh;
+    width: 55vw;
+    border: solid;
+  }
+
+  .img__product {
+    height: 20rem;
+    width: 100%
+  }
+
+  .product {
+    content: url('../images/image-product-mobile.jpg');
+    object-fit: fill;
+    border-radius: 15px;
+  }
+
+  .data {
+    font-size: 16px;
+    padding: 30px;
+    width: 100%;
+  }
+
+  .product__category{
+    font-size: 0.7rem;
+  }
+
+  .product__name{
+    font-size: 2rem;
+  }
+
+  .product__description{
+    font-size: 1rem;
+    padding-right: 5px;
+  }
+
+  .prices{
+    margin-bottom: 10px;
+  }
+
+  .__after{
+    font-size: 35px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .product__name{
+    font-size: 1.7rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .card{
+    width: 85vw;
+    height: 85vh;
+  }
+  .product__name{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card{
+    width: 85vw;
+    height: 85vh;
+  }
+}
+
+@media (max-width: 330px){
+  .card{
+    width: 75vw;
+    height: 80vh;
+  }
+
+  .img__product{
+    height: 10rem;
+  }
+
+  .data{
+    padding: 10px;
+  }
+
+  .product__category{
+    font-size: 0.3rem;
+  }
+
+  .product__name{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .product__description{
+    font-size: 0.6rem;
+  }
+
+  .__after{
+    font-size: 1rem;
+  }
+
+  .__before{
+    font-size: 0.4rem;
+  }
+
+  .buy_product{
+    height: 30px;
+    font-size: 0.6rem;
+  }
+}
